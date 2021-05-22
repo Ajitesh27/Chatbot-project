@@ -1,0 +1,30 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- career
+responses:
+  utter_greet:
+  - text: Hey! This is the nSmiles bot. What would you like to do today?
+    buttons:
+     - title: Academic Booster
+       payload: academic
+     - title: Emotional well being
+       payload: emotional
+     - title: Career Guidance
+       payload: /career_guidance
+  utter_career:
+  - text: Which group would you fall in?
+    buttons:
+    - title: School
+      payload: /school
+    - title: Pre University
+      payload: /pu
+    - title: University
+      payload: /university
+  utter_goodbye:
+  - text: Bye
+  utter_university:
+  - text: Let's start with some questions.
