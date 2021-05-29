@@ -20,7 +20,7 @@ body {
 
 .chat_header {
   height: 60px;
-  background: #BD6610;
+  background: #174DAE;
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
   font-size: 20px;
@@ -37,10 +37,10 @@ body {
   /* display: none; */
   height: 385px;
   padding: 2px;
-  background: #fed8b1;
+  background: linear-gradient(#CCE2F8,#ffffff);
   border-radius: 1px;
   overflow-y: scroll;
-  margin-top: 1px;
+  margin-top: 0px;
   transition: 0.2s;
 }
 
@@ -186,7 +186,7 @@ blockquote {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  color: #BD6610;
+  color: #174DAE;
 }
 
 .imgProfile {
@@ -438,7 +438,7 @@ div.content_data::-webkit-scrollbar {
 
 .menuChips {
   display: block;
-  background: #BD6610;
+  background: #174DAE;
   color: #FFFFFF;
   text-align: center;
   padding: 5px;
@@ -830,7 +830,7 @@ video:focus {
 
 .tap-target {
   color: #fff;
-  background: #060dcfc7;
+  background: #174dae;
 }
 
 .pdf_attachment {
