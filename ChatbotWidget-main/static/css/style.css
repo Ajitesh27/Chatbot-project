@@ -90,10 +90,10 @@ div.chats > pre {
   white-space: initial !important;
 }
 div.chats > ul:not(.browser-default) {
-  padding-left: 1em;
+  padding-left: 0;
 }
-div.chats > ul:not(.browser-default) > li {
-  list-style-type: initial;
+div.chats > ul > li {
+  list-style-type: none;
 }
 
 div.chats > span.botMsg > ol {
@@ -402,8 +402,8 @@ div.content_data::-webkit-scrollbar {
 
 .imgcard {
   object-fit: cover;
-  width: 80%;
-  height: 50%;
+  width: auto;
+  height: auto;
   border-radius: 10px;
   margin-left: 1%;
 }
@@ -705,7 +705,10 @@ div.content_data::-webkit-scrollbar {
 }
 
 /* css for collapsible */
-
+hr { 
+  border:none;
+  background: white;
+} 
 .collapsible {
   margin-top: 5px;
   margin-left: 5%;
@@ -719,6 +722,7 @@ div.content_data::-webkit-scrollbar {
 
 .collapsible-body {
   padding: 15px;
+ 
 }
 
 .collapsible-header {

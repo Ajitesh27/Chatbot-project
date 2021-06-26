@@ -38,11 +38,11 @@ window.addEventListener('load', () => {
     $(".modal").modal();
 
     // enable this if u have configured the bot to start the conversation.
-    // showBotTyping();
-    // $("#userInput").prop('disabled', true);
+     //showBotTyping();
+     //$("#userInput").prop('disabled', true);
 
-    // if you want the bot to start the conversation
-    // customActionTrigger();
+     // if you want the bot to start the conversation
+     customActionTrigger();
   });
   // Toggle the chatbot screen
   $("#profile_div").click(() => {

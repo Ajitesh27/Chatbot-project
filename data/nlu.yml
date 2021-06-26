@@ -3,38 +3,36 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - [Ravi](name)
+    - [Sam](name)
+    - [manoj shashtry](name)
+    - [Asha](name)
+    - [mohammed ali](name)
+    - [Jay](name) 
+    - I am [Christina](name)
+    - I am [Raj shekar](name)
+    - I am [Mattie](name)
+    - I am [Tony stark](name)
+    - My name is [raju](name)
+    - My name is [Ashish malhotra](name)
 
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
     - bye
     - goodbye
-    - have a nice day
-    - see you around
     - bye bye
-    - see you later
-
-- intent: career_guidance
+ 
+- intent: extract_email
   examples: |
-    - career
-- intent: university
-  examples: |
-    - university  
+    - [abc123@gmail.com](email)
+    - [ravi09@yahoo.com](email)
+    - [dancer_12@pes.edu](email)
+    - My email id is [jay@hotmail.org](email)
+    - My email is [stark_tony@xyz.don](email)
 
+- regex: name
+  examples: |
+    - \b[a-zA-Z\s]+\b
+- regex: email
+  examples: |
+    - \b[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\b

@@ -34,6 +34,7 @@ function createChart(
                 backgroundColor,
                 data: chartsData,
                 fill: false,
+                minBarLength: 2,
             },
         ],
     };
@@ -41,6 +42,11 @@ function createChart(
         title: {
             display: true,
             text: title,
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+            },
         },
         layout: {
             padding: {
@@ -51,7 +57,7 @@ function createChart(
             },
         },
         legend: {
-            display: displayLegend,
+            display: false,
             position: "right",
             labels: {
                 boxWidth: 5,
@@ -108,6 +114,7 @@ function createChartinModal(
                 backgroundColor,
                 data: chartsData,
                 fill: false,
+                minBarLength: 2,
             },
         ],
     };
@@ -115,6 +122,11 @@ function createChartinModal(
         title: {
             display: true,
             text: title,
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+            },
         },
         layout: {
             padding: {
@@ -125,7 +137,7 @@ function createChartinModal(
             },
         },
         legend: {
-            display: displayLegend,
+            display: false,
             position: "right",
         },
     };
