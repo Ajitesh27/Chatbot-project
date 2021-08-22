@@ -1,0 +1,2705 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+entities:
+- name
+- email
+slots:
+  email:
+    type: text
+    influence_conversation: false
+ 
+intents:
+- greet:
+    use_entities:
+      - name
+- goodbye
+- ask_email
+- extract_email
+- career_guidance
+- assessment_completed
+- 11th_12th_strength_finder
+- strength_finder_intro
+- employability_test_intro
+
+- strength_finder_1
+- strength_finder_2
+- strength_finder_3
+- strength_finder_4
+- strength_finder_5
+- strength_finder_6
+- strength_finder_7
+- strength_finder_8
+- strength_finder_9
+- strength_finder_10
+- strength_finder_11
+- strength_finder_12
+- strength_finder_13
+- strength_finder_14
+- strength_finder_15
+- strength_finder_16
+- strength_finder_17
+- strength_finder_18
+- strength_finder_19
+- strength_finder_20
+- strength_finder_21
+- strength_finder_22
+- strength_finder_23
+- strength_finder_24
+- strength_finder_25
+- strength_finder_26
+- strength_finder_27
+- strength_finder_28
+- strength_finder_29
+- strength_finder_30
+- strength_finder_31
+- strength_finder_32
+- strength_finder_33
+- strength_finder_34
+- strength_finder_35
+- strength_finder_36
+- strength_finder_37
+- strength_finder_38
+- strength_finder_39
+- strength_finder_40
+- strength_finder_41
+- strength_finder_42
+- strength_finder_43
+- strength_finder_44
+- strength_finder_45
+- strength_finder_46
+- strength_finder_47
+- strength_finder_48
+- strength_finder_49
+- strength_finder_50
+- strength_finder_51
+- strength_finder_52
+- strength_finder_53
+- strength_finder_54
+- strength_finder_55
+- strength_finder_56
+- strength_finder_57
+- strength_finder_58
+- strength_finder_59
+- strength_finder_60
+- strength_finder_61
+- strength_finder_62
+- strength_finder_63
+- strength_finder_64
+- strength_finder_65
+- strength_finder_66
+- strength_finder_67
+- strength_finder_68
+- strength_finder_69
+- strength_finder_70
+- strength_finder_71
+- strength_finder_72
+- strength_finder_73
+- strength_finder_74
+- strength_finder_75
+- strength_finder_76
+- strength_finder_77
+- strength_finder_78
+- strength_finder_79
+- strength_finder_80
+- strength_finder_81
+- strength_finder_82
+- strength_finder_83
+- strength_finder_84
+- strength_finder_85
+- strength_finder_86
+- strength_finder_87
+- strength_finder_88
+- strength_finder_89
+- strength_finder_90
+- strength_finder_91
+- strength_finder_92
+- strength_finder_93
+- strength_finder_94
+- strength_finder_95
+- strength_finder_96
+- strength_finder_97
+- strength_finder_98
+- strength_finder_99
+- strength_finder_100
+- strength_finder_101
+- strength_finder_102
+- strength_finder_103
+- strength_finder_104
+- strength_finder_105
+- strength_finder_106
+- strength_finder_107
+- strength_finder_108
+- strength_finder_109
+- strength_finder_110
+- strength_finder_111
+- strength_finder_112
+- strength_finder_113
+- strength_finder_114
+
+
+
+
+
+
+- employability_test_1
+- employability_test_2
+- employability_test_3
+- employability_test_4
+- employability_test_5
+- employability_test_6
+- employability_test_7
+- employability_test_8
+- employability_test_9
+- employability_test_10
+- employability_test_11
+- employability_test_12
+- employability_test_13
+- employability_test_14
+- employability_test_15
+- employability_test_16
+- employability_test_17
+- employability_test_18
+- employability_test_19
+- employability_test_20
+- employability_test_21
+- employability_test_22
+- employability_test_23
+- employability_test_24
+- employability_test_25
+- employability_test_26
+- employability_test_27
+- employability_test_28
+- employability_test_29
+- employability_test_30
+- employability_test_31
+- employability_test_32
+- employability_test_33
+- employability_test_34
+- employability_test_35
+- employability_test_36
+- employability_test_37
+- employability_test_38
+- employability_test_39
+- employability_test_40
+- employability_test_41
+- employability_test_42
+- employability_test_43
+- employability_test_44
+- employability_test_45
+- employability_test_46
+- employability_test_47
+- employability_test_48
+- employability_test_49
+- employability_test_50
+- employability_test_51
+- employability_test_52
+- employability_test_53
+- employability_test_54
+- employability_test_55
+- employability_test_56
+- employability_test_57
+- employability_test_58
+- employability_test_59
+- employability_test_60
+- employability_test_61
+- employability_test_62
+- employability_test_63
+- employability_test_64
+- employability_test_65
+- employability_test_66
+- employability_test_67
+- employability_test_68
+- employability_test_69
+- employability_test_70
+- employability_test_71
+
+
+
+actions:
+- action_hello_world
+- action_greet_user
+- action_db_check
+- action_update_interest_employability
+- action_update_interest
+responses:
+  utter_greet:
+  - text: Hey {name}, What would you like to do today?
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: Academic and competition success
+          description: Achieve your academic success and reach your competitive goals while alleviating the low self-confidence, anxiety, and lack of motivation surrounding studying and test-taking. Get a personalized blueprint for students and tips for parents to support their children based on their needs. <a href='https://thestudentsuccessapp.com/academic-and-competition-success'>Click here </a> for more information or to take the assessment.
+        - title: Social Emotional Learning
+          description: Student success is most often viewed through the lens of student achievement and academic outcomes. However, research shows that positive academic outcomes follow positive lifestyle choices, attitudes, behaviours and interpersonal relationships. <a href='https://thestudentsuccessapp.com/social-emotional-learning'>Click here </a> for more information or to take the assessment.
+        - title: Career guidance and counselling
+          description: Planning your career at the right time is the secret to a happy life. Find your IKIGAI and learn the skills needed to succeed using our customized career blueprint.Click the below button for taking the assessment.
+    buttons:
+     - title: Career guidance and counselling
+       payload: /career_guidance
+  utter_greet_without_name:
+  - text: What would you like to do today?
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: Academic and competition success
+          description: Achieve your academic success and reach your competitive goals while alleviating the low self-confidence, anxiety, and lack of motivation surrounding studying and test-taking. Get a personalized blueprint for students and tips for parents to support their children based on their needs. <a href='https://thestudentsuccessapp.com/academic-and-competition-success'>Click here </a> for more information or to take the assessment.
+        - title: Social Emotional Learning
+          description: Student success is most often viewed through the lens of student achievement and academic outcomes. However, research shows that positive academic outcomes follow positive lifestyle choices, attitudes, behaviours and interpersonal relationships. <a href='https://thestudentsuccessapp.com/social-emotional-learning'>Click here </a> for more information or to take the assessment.
+        - title: Career guidance and counselling
+          description: Planning your career at the right time is the secret to a happy life. Find your IKIGAI and learn the skills needed to succeed using our customized career blueprint.Click the below button for taking the assessment.
+    buttons:
+     - title: Career guidance and counselling
+       payload: /career_guidance
+
+  utter_career_guidance:
+  - text: Please select a category.
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: 9th and 10th-grade students
+          description: The course or the stream you pick post 10th sets the right tone for your career path! Make the right choice by choosing the program that suits you. <a href='https://thestudentsuccessapp.com/careerguidance_highschool'>Click here </a> for more information or to take the assessment.
+        - title: 11th and 12th-grade students
+          description: Even after picking a stream, it is important to have clarity on a career pathway that aligns with your interests and have job prospects after graduation. Take this assessment to find the job sector best for you.
+        - title: Engineering and technology streams
+          description: Do you want to build your career after engineering? Getting confused with too many technologies such as AI, ML, or blockchain? Don’t get pressured by what others say. Take a step that matches your interests to build technical and behavioral skills that can help you stand out.Take this first-of-its-kind career guidance vetted by professors of top engineering colleges in India and industry experts to find which program is right for you! <a href='https://thestudentsuccessapp.com/careerguidance-engineering'>Click here </a> for more information or to take the assessment.
+        - title: Graduates and PG students
+          description: Are you stuck in a course or degree program you don’t enjoy? Don’t understand your career prospects? Take this assessment to find your personal high-growth career area that you will enjoy most. <a href='https://thestudentsuccessapp.com/careerguidance-graduates'>Click here </a> for more information or to take the assessment.
+        - title: Upskilling and growth
+          description: Are you looking to take steps to advance your career, re-skill, up-skill or re-enter the workforce after a gap, specfically in technical roles? <a href='https://thestudentsuccessapp.com/careerguidance-skill-growth'>Click here </a> for more information or to take the assessment.
+        - title: IKIGAI-based entrepreneurship
+          description: Do you want to be your own boss? Do you want to take the big plunge but not sure which area suits you best? Take this assessment to know how your inherent talents and interests map to the key areas of entrepreneurship that can help you make the best decisions to succeed in the journey ahead! <a href='https://thestudentsuccessapp.com/ikigai-entrepreneurship'>Click here </a> for more information or to take the assessment.
+        - title: 2020 National Education Policy-based Vocational Career Guidance
+          description: Do you know that having skills in vocations can not only help you get a job immediately but also can equip you with skills to be your own boss? <a href='https://thestudentsuccessapp.com/vocational-career-guidance'>Click here </a> for more information or to take the assessment.
+    buttons:
+    - title: 11th and 12th-grade students
+      payload: /ask_email
+
+  utter_ask_email:
+  - text: May I know your email id.
+
+
+
+  utter_goodbye:
+  - text: Bye
+  utter_strength_finder_intro:
+  - text: "Instructions:This assessment can help you find out what your interests are and how they relate to the world of work.Read each question carefully and decide how you would feel about doing each type of work.Try NOT to think about if you have enough education or training to do the work or how much money you would make doing the work.Just think about if you would like or dislike doing the work.There are no right or wrong answers!"
+    buttons:
+    - title: Take Assessment
+      payload: /11th_12th_strength_finder
+  utter_employability_test_intro:
+  - text: "Instructions: Read each question carefully and think about your behaviors, attitudes or habits."
+    buttons:
+    - title: Take Assessment
+      payload: /employability_test_1
+  utter_11th_12th_strength_finder:
+  - text: 1/114 Design and draw using sketches, moulds or templates.
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_2{{"qno":"1","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_2{{"qno":"1","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_2{{"qno":"1","score":"3"}}
+    - title: Like
+      payload: /strength_finder_2{{"qno":"1","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_2{{"qno":"1","score":"5"}}
+  utter_strength_finder_2:
+  - text: 2/114  Facilitate holistic way of taking care of life
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_3{{"qno":"2","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_3{{"qno":"2","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_3{{"qno":"2","score":"3"}}
+    - title: Like
+      payload: /strength_finder_3{{"qno":"2","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_3{{"qno":"2","score":"5"}}
+  utter_strength_finder_3:
+  - text: 3/114  Design and develop programs using computer software applications and tools
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_4{{"qno":"3","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_4{{"qno":"3","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_4{{"qno":"3","score":"3"}}
+    - title: Like
+      payload: /strength_finder_4{{"qno":"3","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_4{{"qno":"3","score":"5"}}
+  utter_strength_finder_4:
+  - text: 4/114  Provide recreation or entertainment to people through activities
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_5{{"qno":"4","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_5{{"qno":"4","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_5{{"qno":"4","score":"3"}}
+    - title: Like
+      payload: /strength_finder_5{{"qno":"4","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_5{{"qno":"4","score":"5"}}
+  utter_strength_finder_5:
+  - text: 5/114  Work with national, state or local Govt bodies
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_6{{"qno":"5","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_6{{"qno":"5","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_6{{"qno":"5","score":"3"}}
+    - title: Like
+      payload: /strength_finder_6{{"qno":"5","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_6{{"qno":"5","score":"5"}}
+  utter_strength_finder_6:
+  - text: 6/114  Make advertisements to promote a product
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_7{{"qno":"6","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_7{{"qno":"6","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_7{{"qno":"6","score":"3"}}
+    - title: Like
+      payload: /strength_finder_7{{"qno":"6","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_7{{"qno":"6","score":"5"}}
+  utter_strength_finder_7:
+  - text: 7/114  Doing research
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_8{{"qno":"7","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_8{{"qno":"7","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_8{{"qno":"7","score":"3"}}
+    - title: Like
+      payload: /strength_finder_8{{"qno":"7","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_8{{"qno":"7","score":"5"}}
+  utter_strength_finder_8:
+  - text: 8/114  Listening and providing emotional support
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_9{{"qno":"8","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_9{{"qno":"8","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_9{{"qno":"8","score":"3"}}
+    - title: Like
+      payload: /strength_finder_9{{"qno":"8","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_9{{"qno":"8","score":"5"}}
+  utter_strength_finder_9:
+  - text: 9/114  Solving problems using  algorithms, formulae and theories
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_10{{"qno":"9","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_10{{"qno":"9","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_10{{"qno":"9","score":"3"}}
+    - title: Like
+      payload: /strength_finder_10{{"qno":"9","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_10{{"qno":"9","score":"5"}}
+  utter_strength_finder_10:
+  - text: 10/114  Visit and learn from beautiful, historic or interesting buildings
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_11{{"qno":"10","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_11{{"qno":"10","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_11{{"qno":"10","score":"3"}}
+    - title: Like
+      payload: /strength_finder_11{{"qno":"10","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_11{{"qno":"10","score":"5"}}
+  utter_strength_finder_11:
+  - text: 11/114  Start my own business
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_12{{"qno":"11","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_12{{"qno":"11","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_12{{"qno":"11","score":"3"}}
+    - title: Like
+      payload: /strength_finder_12{{"qno":"11","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_12{{"qno":"11","score":"5"}}
+  utter_strength_finder_12:
+  - text: 12/114  Design systems to gather, store and process huge volumes of user data
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_13{{"qno":"12","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_13{{"qno":"12","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_13{{"qno":"12","score":"3"}}
+    - title: Like
+      payload: /strength_finder_13{{"qno":"12","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_13{{"qno":"12","score":"5"}}
+  utter_strength_finder_13:
+  - text: 13/114  Plan and strategize how to take a product or service to market
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_14{{"qno":"13","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_14{{"qno":"13","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_14{{"qno":"13","score":"3"}}
+    - title: Like
+      payload: /strength_finder_14{{"qno":"13","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_14{{"qno":"13","score":"5"}}
+  utter_strength_finder_14:
+  - text: 14/114  Do an analysis of available stock or goods, to fulfill future needs
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_15{{"qno":"14","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_15{{"qno":"14","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_15{{"qno":"14","score":"3"}}
+    - title: Like
+      payload: /strength_finder_15{{"qno":"14","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_15{{"qno":"14","score":"5"}}
+  utter_strength_finder_15:
+  - text: 15/114  Create and manage accounts, payments and  collections
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_16{{"qno":"15","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_16{{"qno":"15","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_16{{"qno":"15","score":"3"}}
+    - title: Like
+      payload: /strength_finder_16{{"qno":"15","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_16{{"qno":"15","score":"5"}}
+  utter_strength_finder_16:
+  - text: 16/114  Talk to people easily, tacttfully and courteously over call or chat
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_17{{"qno":"16","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_17{{"qno":"16","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_17{{"qno":"16","score":"3"}}
+    - title: Like
+      payload: /strength_finder_17{{"qno":"16","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_17{{"qno":"16","score":"5"}}
+  utter_strength_finder_17:
+  - text: 17/114  Interested in how business works
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_18{{"qno":"17","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_18{{"qno":"17","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_18{{"qno":"17","score":"3"}}
+    - title: Like
+      payload: /strength_finder_18{{"qno":"17","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_18{{"qno":"17","score":"5"}}
+  utter_strength_finder_18:
+  - text: 18/114  Write content for a website or blogs based on requirement
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_19{{"qno":"18","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_19{{"qno":"18","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_19{{"qno":"18","score":"3"}}
+    - title: Like
+      payload: /strength_finder_19{{"qno":"18","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_19{{"qno":"18","score":"5"}}
+  utter_strength_finder_19:
+  - text: 19/114 Perform infront of live audience
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_20{{"qno":"19","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_20{{"qno":"19","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_20{{"qno":"19","score":"3"}}
+    - title: Like
+      payload: /strength_finder_20{{"qno":"19","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_20{{"qno":"19","score":"5"}}
+  utter_strength_finder_20:
+  - text: 20/114  Study and manage patient health data using technology
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_21{{"qno":"20","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_21{{"qno":"20","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_21{{"qno":"20","score":"3"}}
+    - title: Like
+      payload: /strength_finder_21{{"qno":"20","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_21{{"qno":"20","score":"5"}}
+  utter_strength_finder_21:
+  - text: 21/114 Work on physical devices like electronic components, switches, routers, computers etc
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_22{{"qno":"21","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_22{{"qno":"21","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_22{{"qno":"21","score":"3"}}
+    - title: Like
+      payload: /strength_finder_22{{"qno":"21","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_22{{"qno":"21","score":"5"}}
+  utter_strength_finder_22:
+  - text: 22/114  Facilitate accommodation to sleep for one or more nights for people traveling for business or leisure
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_23{{"qno":"22","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_23{{"qno":"22","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_23{{"qno":"22","score":"3"}}
+    - title: Like
+      payload: /strength_finder_23{{"qno":"22","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_23{{"qno":"22","score":"5"}}
+  utter_strength_finder_23:
+  - text: 23/114 Work for the safety  and security of the people and nation
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_24{{"qno":"23","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_24{{"qno":"23","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_24{{"qno":"23","score":"3"}}
+    - title: Like
+      payload: /strength_finder_24{{"qno":"23","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_24{{"qno":"23","score":"5"}}
+  utter_strength_finder_24:
+  - text: 24/114 Design and develop creative concepts to sell a product
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_25{{"qno":"24","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_25{{"qno":"24","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_25{{"qno":"24","score":"3"}}
+    - title: Like
+      payload: /strength_finder_25{{"qno":"24","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_25{{"qno":"24","score":"5"}}
+  utter_strength_finder_25:
+  - text: 25/114 Create Intellectual property such as patents
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_26{{"qno":"25","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_26{{"qno":"25","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_26{{"qno":"25","score":"3"}}
+    - title: Like
+      payload: /strength_finder_26{{"qno":"25","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_26{{"qno":"25","score":"5"}}
+  utter_strength_finder_26:
+  - text: 26/114 Train, develop and mentor
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_27{{"qno":"26","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_27{{"qno":"26","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_27{{"qno":"26","score":"3"}}
+    - title: Like
+      payload: /strength_finder_27{{"qno":"26","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_27{{"qno":"26","score":"5"}}
+  utter_strength_finder_27:
+  - text: 27/114 Produce creative solutions to real world problems using the application of science,maths and technology
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_28{{"qno":"27","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_28{{"qno":"27","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_28{{"qno":"27","score":"3"}}
+    - title: Like
+      payload: /strength_finder_28{{"qno":"27","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_28{{"qno":"27","score":"5"}}
+  utter_strength_finder_28:
+  - text: 28/114 Plan, design and oversee construction
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_29{{"qno":"28","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_29{{"qno":"28","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_29{{"qno":"28","score":"3"}}
+    - title: Like
+      payload: /strength_finder_29{{"qno":"28","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_29{{"qno":"28","score":"5"}}
+  utter_strength_finder_29:
+  - text: 29/114 Negotiating and closing business deals to generate revenue
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_30{{"qno":"29","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_30{{"qno":"29","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_30{{"qno":"29","score":"3"}}
+    - title: Like
+      payload: /strength_finder_30{{"qno":"29","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_30{{"qno":"29","score":"5"}}
+  utter_strength_finder_30:
+  - text: 30/114 Implement algorithms to analyze data generated to understand user behavior
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_31{{"qno":"30","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_31{{"qno":"30","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_31{{"qno":"30","score":"3"}}
+    - title: Like
+      payload: /strength_finder_31{{"qno":"30","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_31{{"qno":"30","score":"5"}}
+  utter_strength_finder_31:
+  - text: 31/114 Promote ideas and messages through media like newspapers, TV, Social media etc
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_32{{"qno":"31","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_32{{"qno":"31","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_32{{"qno":"31","score":"3"}}
+    - title: Like
+      payload: /strength_finder_32{{"qno":"31","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_32{{"qno":"31","score":"5"}}
+  utter_strength_finder_32:
+  - text: 32/114 Plan and manage the movement of things to ensure timely delivery
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_33{{"qno":"32","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_33{{"qno":"32","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_33{{"qno":"32","score":"3"}}
+    - title: Like
+      payload: /strength_finder_33{{"qno":"32","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_33{{"qno":"32","score":"5"}}
+  utter_strength_finder_33:
+  - text: 33/114 Help entrepreneurs raise money by finding qualified investors
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_34{{"qno":"33","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_34{{"qno":"33","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_34{{"qno":"33","score":"3"}}
+    - title: Like
+      payload: /strength_finder_34{{"qno":"33","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_34{{"qno":"33","score":"5"}}
+  utter_strength_finder_34:
+  - text: 34/114 Activities like data entry, preparing spreadsheets and creating sales reports using specialised software
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_35{{"qno":"34","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_35{{"qno":"34","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_35{{"qno":"34","score":"3"}}
+    - title: Like
+      payload: /strength_finder_35{{"qno":"34","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_35{{"qno":"34","score":"5"}}
+  utter_strength_finder_35:
+  - text: 35/114 Help organisations improve their performance by offering solutions to existing problems
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_36{{"qno":"35","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_36{{"qno":"35","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_36{{"qno":"35","score":"3"}}
+    - title: Like
+      payload: /strength_finder_36{{"qno":"35","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_36{{"qno":"35","score":"5"}}
+  utter_strength_finder_36:
+  - text: 36/114 Write user manuals and guides to help  users understand the product or system
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_37{{"qno":"36","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_37{{"qno":"36","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_37{{"qno":"36","score":"3"}}
+    - title: Like
+      payload: /strength_finder_37{{"qno":"36","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_37{{"qno":"36","score":"5"}}
+  utter_strength_finder_37:
+  - text: 37/114 Work in radio, television or film industry
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_38{{"qno":"37","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_38{{"qno":"37","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_38{{"qno":"37","score":"3"}}
+    - title: Like
+      payload: /strength_finder_38{{"qno":"37","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_38{{"qno":"37","score":"5"}}
+  utter_strength_finder_38:
+  - text: 38/114 Facilitate health care services
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_39{{"qno":"38","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_39{{"qno":"38","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_39{{"qno":"38","score":"3"}}
+    - title: Like
+      payload: /strength_finder_39{{"qno":"38","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_39{{"qno":"38","score":"5"}}
+  utter_strength_finder_39:
+  - text: 39/114 Code programs to hack ethically
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_40{{"qno":"39","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_40{{"qno":"39","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_40{{"qno":"39","score":"3"}}
+    - title: Like
+      payload: /strength_finder_40{{"qno":"39","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_40{{"qno":"39","score":"5"}}
+  utter_strength_finder_40:
+  - text: 40/114 Planning and making travel plans for vacation trip
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_41{{"qno":"40","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_41{{"qno":"40","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_41{{"qno":"40","score":"3"}}
+    - title: Like
+      payload: /strength_finder_41{{"qno":"40","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_41{{"qno":"40","score":"5"}}
+  utter_strength_finder_41:
+  - text: 41/114 Work for the development and welfare of underprivileged
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_42{{"qno":"41","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_42{{"qno":"41","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_42{{"qno":"41","score":"3"}}
+    - title: Like
+      payload: /strength_finder_42{{"qno":"41","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_42{{"qno":"41","score":"5"}}
+  utter_strength_finder_42:
+  - text: 42/114 Design websites that people like and find easy to use
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_43{{"qno":"42","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_43{{"qno":"42","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_43{{"qno":"42","score":"3"}}
+    - title: Like
+      payload: /strength_finder_43{{"qno":"42","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_43{{"qno":"42","score":"5"}}
+  utter_strength_finder_43:
+  - text: 43/114 Design and development of new products
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_44{{"qno":"43","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_44{{"qno":"43","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_44{{"qno":"43","score":"3"}}
+    - title: Like
+      payload: /strength_finder_44{{"qno":"43","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_44{{"qno":"43","score":"5"}}
+  utter_strength_finder_44:
+  - text: 44/114 Care about others growth and development of people in the organization
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_45{{"qno":"44","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_45{{"qno":"44","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_45{{"qno":"44","score":"3"}}
+    - title: Like
+      payload: /strength_finder_45{{"qno":"44","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_45{{"qno":"44","score":"5"}}
+  utter_strength_finder_45:
+  - text: 45/114 Learn deep and emerging technologies, techniques and processes to find suitable solutions to a problem
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_46{{"qno":"45","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_46{{"qno":"45","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_46{{"qno":"45","score":"3"}}
+    - title: Like
+      payload: /strength_finder_46{{"qno":"45","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_46{{"qno":"45","score":"5"}}
+  utter_strength_finder_46:
+  - text: 46/114 Build eco-friendly products
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_47{{"qno":"46","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_47{{"qno":"46","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_47{{"qno":"46","score":"3"}}
+    - title: Like
+      payload: /strength_finder_47{{"qno":"46","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_47{{"qno":"46","score":"5"}}
+  utter_strength_finder_47:
+  - text: 47/114 Make business contacts or network with people to generate more business
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_48{{"qno":"47","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_48{{"qno":"47","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_48{{"qno":"47","score":"3"}}
+    - title: Like
+      payload: /strength_finder_48{{"qno":"47","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_48{{"qno":"47","score":"5"}}
+  utter_strength_finder_48:
+  - text: 48/114 Using statistical models to help analyze, estimate and make future predictions
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_49{{"qno":"48","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_49{{"qno":"48","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_49{{"qno":"48","score":"3"}}
+    - title: Like
+      payload: /strength_finder_49{{"qno":"48","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_49{{"qno":"48","score":"5"}}
+  utter_strength_finder_49:
+  - text: 49/114 Build customised social media campaigns to build a brand
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_50{{"qno":"49","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_50{{"qno":"49","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_50{{"qno":"49","score":"3"}}
+    - title: Like
+      payload: /strength_finder_50{{"qno":"49","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_50{{"qno":"49","score":"5"}}
+  utter_strength_finder_50:
+  - text: 50/114 Assess the risks that may arise before execution and take measures to minimize them
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_51{{"qno":"50","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_51{{"qno":"50","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_51{{"qno":"50","score":"3"}}
+    - title: Like
+      payload: /strength_finder_51{{"qno":"50","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_51{{"qno":"50","score":"5"}}
+  utter_strength_finder_51:
+  - text: 51/114 Assess the performance of stocks, bonds and other types of investments
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_52{{"qno":"51","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_52{{"qno":"51","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_52{{"qno":"51","score":"3"}}
+    - title: Like
+      payload: /strength_finder_52{{"qno":"51","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_52{{"qno":"51","score":"5"}}
+  utter_strength_finder_52:
+  - text: 52/114 Enjoy Identifying defects or faults
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_53{{"qno":"52","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_53{{"qno":"52","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_53{{"qno":"52","score":"3"}}
+    - title: Like
+      payload: /strength_finder_53{{"qno":"52","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_53{{"qno":"52","score":"5"}}
+  utter_strength_finder_53:
+  - text: 53/114 Find patterns and anaylse business data
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_54{{"qno":"53","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_54{{"qno":"53","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_54{{"qno":"53","score":"3"}}
+    - title: Like
+      payload: /strength_finder_54{{"qno":"53","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_54{{"qno":"53","score":"5"}}
+  utter_strength_finder_54:
+  - text: 54/114 Develop content that can be used by teachers to help students learn
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_55{{"qno":"54","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_55{{"qno":"54","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_55{{"qno":"54","score":"3"}}
+    - title: Like
+      payload: /strength_finder_55{{"qno":"54","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_55{{"qno":"54","score":"5"}}
+  utter_strength_finder_55:
+  - text: 55/114 Use different materials and techniques to create art
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_56{{"qno":"55","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_56{{"qno":"55","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_56{{"qno":"55","score":"3"}}
+    - title: Like
+      payload: /strength_finder_56{{"qno":"55","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_56{{"qno":"55","score":"5"}}
+  utter_strength_finder_56:
+  - text: 56/114 Promote healthy living practices
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_57{{"qno":"56","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_57{{"qno":"56","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_57{{"qno":"56","score":"3"}}
+    - title: Like
+      payload: /strength_finder_57{{"qno":"56","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_57{{"qno":"56","score":"5"}}
+  utter_strength_finder_57:
+  - text: 57/114 Develop and build software using different programming languages
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_58{{"qno":"57","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_58{{"qno":"57","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_58{{"qno":"57","score":"3"}}
+    - title: Like
+      payload: /strength_finder_58{{"qno":"57","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_58{{"qno":"57","score":"5"}}
+  utter_strength_finder_58:
+  - text: 58/114 Helping people have fun or relaxation or rest through activities
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_59{{"qno":"58","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_59{{"qno":"58","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_59{{"qno":"58","score":"3"}}
+    - title: Like
+      payload: /strength_finder_59{{"qno":"58","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_59{{"qno":"58","score":"5"}}
+  utter_strength_finder_59:
+  - text: 59/114 Work with uniformed services like Navy, army, police etc
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_60{{"qno":"59","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_60{{"qno":"59","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_60{{"qno":"59","score":"3"}}
+    - title: Like
+      payload: /strength_finder_60{{"qno":"59","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_60{{"qno":"59","score":"5"}}
+  utter_strength_finder_60:
+  - text: 60/114 Design or create graphics to sell a product
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_61{{"qno":"60","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_61{{"qno":"60","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_61{{"qno":"60","score":"3"}}
+    - title: Like
+      payload: /strength_finder_61{{"qno":"60","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_61{{"qno":"60","score":"5"}}
+  utter_strength_finder_61:
+  - text: 61/114 Figure out how things work
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_62{{"qno":"61","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_62{{"qno":"61","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_62{{"qno":"61","score":"3"}}
+    - title: Like
+      payload: /strength_finder_62{{"qno":"61","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_62{{"qno":"61","score":"5"}}
+  utter_strength_finder_62:
+  - text: 62/114 Support and motivate people to overcome their problems
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_63{{"qno":"62","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_63{{"qno":"62","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_63{{"qno":"62","score":"3"}}
+    - title: Like
+      payload: /strength_finder_63{{"qno":"62","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_63{{"qno":"62","score":"5"}}
+  utter_strength_finder_63:
+  - text: 63/114 Use logic, analysis and reasoning to solve problems and reduce risks of unexpected failures
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_64{{"qno":"63","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_64{{"qno":"63","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_64{{"qno":"63","score":"3"}}
+    - title: Like
+      payload: /strength_finder_64{{"qno":"63","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_64{{"qno":"63","score":"5"}}
+  utter_strength_finder_64:
+  - text: 64/114 Develop new designs for an already existing product to make it more beautiful
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_65{{"qno":"64","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_65{{"qno":"64","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_65{{"qno":"64","score":"3"}}
+    - title: Like
+      payload: /strength_finder_65{{"qno":"64","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_65{{"qno":"64","score":"5"}}
+  utter_strength_finder_65:
+  - text: 65/114 Take advantage of opportunities to make more business and money
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_66{{"qno":"65","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_66{{"qno":"65","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_66{{"qno":"65","score":"3"}}
+    - title: Like
+      payload: /strength_finder_66{{"qno":"65","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_66{{"qno":"65","score":"5"}}
+  utter_strength_finder_66:
+  - text: 66/114 Present large volumes of data in easily understandable formats like charts, graphs. using certain software tools
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_67{{"qno":"66","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_67{{"qno":"66","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_67{{"qno":"66","score":"3"}}
+    - title: Like
+      payload: /strength_finder_67{{"qno":"66","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_67{{"qno":"66","score":"5"}}
+  utter_strength_finder_67:
+  - text: 67/114 Analysing current market trends and creating a competitive advantage for a product/service
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_68{{"qno":"67","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_68{{"qno":"67","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_68{{"qno":"67","score":"3"}}
+    - title: Like
+      payload: /strength_finder_68{{"qno":"67","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_68{{"qno":"67","score":"5"}}
+  utter_strength_finder_68:
+  - text: 68/114 Keeping track of order vs available stock, to ensure timely delivery
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_69{{"qno":"68","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_69{{"qno":"68","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_69{{"qno":"68","score":"3"}}
+    - title: Like
+      payload: /strength_finder_69{{"qno":"68","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_69{{"qno":"68","score":"5"}}
+  utter_strength_finder_69:
+  - text: 69/114 Generate credit and debit statements
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_70{{"qno":"69","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_70{{"qno":"69","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_70{{"qno":"69","score":"3"}}
+    - title: Like
+      payload: /strength_finder_70{{"qno":"69","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_70{{"qno":"69","score":"5"}}
+  utter_strength_finder_70:
+  - text: 70/114 Talk to people to solve problems or gather information or feedback over phone or chat
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_71{{"qno":"70","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_71{{"qno":"70","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_71{{"qno":"70","score":"3"}}
+    - title: Like
+      payload: /strength_finder_71{{"qno":"70","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_71{{"qno":"70","score":"5"}}
+  utter_strength_finder_71:
+  - text: 71/114 Comprehend and create executive reports looking at business data and trends
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_72{{"qno":"71","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_72{{"qno":"71","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_72{{"qno":"71","score":"3"}}
+    - title: Like
+      payload: /strength_finder_72{{"qno":"71","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_72{{"qno":"71","score":"5"}}
+  utter_strength_finder_72:
+  - text: 72/114 Write content for advertising and marketing materials based on the job requirements
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_73{{"qno":"72","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_73{{"qno":"72","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_73{{"qno":"72","score":"3"}}
+    - title: Like
+      payload: /strength_finder_73{{"qno":"72","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_73{{"qno":"72","score":"5"}}
+  utter_strength_finder_73:
+  - text: 73/114 Use voice, body or objects to express an art
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_74{{"qno":"73","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_74{{"qno":"73","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_74{{"qno":"73","score":"3"}}
+    - title: Like
+      payload: /strength_finder_74{{"qno":"73","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_74{{"qno":"73","score":"5"}}
+  utter_strength_finder_74:
+  - text: 74/114 Provide systems to manage and maintain health records
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_75{{"qno":"74","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_75{{"qno":"74","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_75{{"qno":"74","score":"3"}}
+    - title: Like
+      payload: /strength_finder_75{{"qno":"74","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_75{{"qno":"74","score":"5"}}
+  utter_strength_finder_75:
+  - text: 75/114 Build networking systems to allow computers and electronic devices communicate with one another
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_76{{"qno":"75","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_76{{"qno":"75","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_76{{"qno":"75","score":"3"}}
+    - title: Like
+      payload: /strength_finder_76{{"qno":"75","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_76{{"qno":"75","score":"5"}}
+  utter_strength_finder_76:
+  - text: 76/114 Provide ways to enhance bookings and stay at hotel/lodging services
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_77{{"qno":"76","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_77{{"qno":"76","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_77{{"qno":"76","score":"3"}}
+    - title: Like
+      payload: /strength_finder_77{{"qno":"76","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_77{{"qno":"76","score":"5"}}
+  utter_strength_finder_77:
+  - text: 77/114 Implement Govt. policies and regulations
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_78{{"qno":"77","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_78{{"qno":"77","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_78{{"qno":"77","score":"3"}}
+    - title: Like
+      payload: /strength_finder_78{{"qno":"77","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_78{{"qno":"77","score":"5"}}
+  utter_strength_finder_78:
+  - text: 78/114 Work with special effects, animation, or other visual images to create computer games, movies, music videos, and commercials
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_79{{"qno":"78","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_79{{"qno":"78","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_79{{"qno":"78","score":"3"}}
+    - title: Like
+      payload: /strength_finder_79{{"qno":"78","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_79{{"qno":"78","score":"5"}}
+  utter_strength_finder_79:
+  - text: 79/114 Work on enhancing a product using innovative science-based approaches
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_80{{"qno":"79","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_80{{"qno":"79","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_80{{"qno":"79","score":"3"}}
+    - title: Like
+      payload: /strength_finder_80{{"qno":"79","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_80{{"qno":"79","score":"5"}}
+  utter_strength_finder_80:
+  - text: 80/114 Teach people
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_81{{"qno":"80","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_81{{"qno":"80","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_81{{"qno":"80","score":"3"}}
+    - title: Like
+      payload: /strength_finder_81{{"qno":"80","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_81{{"qno":"80","score":"5"}}
+  utter_strength_finder_81:
+  - text: 81/114 Work on hardware and tools to operate machines or devices or components
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_82{{"qno":"81","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_82{{"qno":"81","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_82{{"qno":"81","score":"3"}}
+    - title: Like
+      payload: /strength_finder_82{{"qno":"81","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_82{{"qno":"81","score":"5"}}
+  utter_strength_finder_82:
+  - text: 82/114 Look for geometric precision in monuments or temples
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_83{{"qno":"82","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_83{{"qno":"82","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_83{{"qno":"82","score":"3"}}
+    - title: Like
+      payload: /strength_finder_83{{"qno":"82","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_83{{"qno":"82","score":"5"}}
+  utter_strength_finder_83:
+  - text: 83/114 Work on collateral materials, such as posters, contests, coupons, or give-aways to promote sales
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_84{{"qno":"83","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_84{{"qno":"83","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_84{{"qno":"83","score":"3"}}
+    - title: Like
+      payload: /strength_finder_84{{"qno":"83","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_84{{"qno":"83","score":"5"}}
+  utter_strength_finder_84:
+  - text: 84/114 Develop or manage systems to store large volumes of different variety of data like videos, audios, text etc
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_85{{"qno":"84","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_85{{"qno":"84","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_85{{"qno":"84","score":"3"}}
+    - title: Like
+      payload: /strength_finder_85{{"qno":"84","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_85{{"qno":"84","score":"5"}}
+  utter_strength_finder_85:
+  - text: 85/114 Creating newsletters to communicate with  customers, employees, family, or friends
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_86{{"qno":"85","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_86{{"qno":"85","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_86{{"qno":"85","score":"3"}}
+    - title: Like
+      payload: /strength_finder_86{{"qno":"85","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_86{{"qno":"85","score":"5"}}
+  utter_strength_finder_86:
+  - text: 86/114 Plan and coordinate activities involved in the movement of goodsusing certain software tools
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_87{{"qno":"86","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_87{{"qno":"86","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_87{{"qno":"86","score":"3"}}
+    - title: Like
+      payload: /strength_finder_87{{"qno":"86","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_87{{"qno":"86","score":"5"}}
+  utter_strength_finder_87:
+  - text: 87/114 Advise clients on how to save their money through Investment in share market
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_88{{"qno":"87","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_88{{"qno":"87","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_88{{"qno":"87","score":"3"}}
+    - title: Like
+      payload: /strength_finder_88{{"qno":"87","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_88{{"qno":"87","score":"5"}}
+  utter_strength_finder_88:
+  - text: 88/114 Use software applications like Word, Excel etc to record data
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_89{{"qno":"88","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_89{{"qno":"88","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_89{{"qno":"88","score":"3"}}
+    - title: Like
+      payload: /strength_finder_89{{"qno":"88","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_89{{"qno":"88","score":"5"}}
+  utter_strength_finder_89:
+  - text: 89/114 Identity critical trends in data that can help business decision
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_90{{"qno":"89","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_90{{"qno":"89","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_90{{"qno":"89","score":"3"}}
+    - title: Like
+      payload: /strength_finder_90{{"qno":"89","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_90{{"qno":"89","score":"5"}}
+  utter_strength_finder_90:
+  - text: 90/114 Write manuals with  instructions on installing, using, or troubleshooting a hardware or software product
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_91{{"qno":"90","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_91{{"qno":"90","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_91{{"qno":"90","score":"3"}}
+    - title: Like
+      payload: /strength_finder_91{{"qno":"90","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_91{{"qno":"90","score":"5"}}
+  utter_strength_finder_91:
+  - text: 91/114 Work in media and entertainment industry
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_92{{"qno":"91","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_92{{"qno":"91","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_92{{"qno":"91","score":"3"}}
+    - title: Like
+      payload: /strength_finder_92{{"qno":"91","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_92{{"qno":"91","score":"5"}}
+  utter_strength_finder_92:
+  - text: 92/114 Provide services to make healthcare accessible using technology
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_93{{"qno":"92","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_93{{"qno":"92","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_93{{"qno":"92","score":"3"}}
+    - title: Like
+      payload: /strength_finder_93{{"qno":"92","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_93{{"qno":"92","score":"5"}}
+  utter_strength_finder_93:
+  - text: 93/114 Prevent systems from security attacks
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_94{{"qno":"93","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_94{{"qno":"93","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_94{{"qno":"93","score":"3"}}
+    - title: Like
+      payload: /strength_finder_94{{"qno":"93","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_94{{"qno":"93","score":"5"}}
+  utter_strength_finder_94:
+  - text: 94/114 Encourage and facilitate people to travel for business or leisure
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_95{{"qno":"94","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_95{{"qno":"94","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_95{{"qno":"94","score":"3"}}
+    - title: Like
+      payload: /strength_finder_95{{"qno":"94","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_95{{"qno":"94","score":"5"}}
+  utter_strength_finder_95:
+  - text: 95/114 Set-up NGO for solving civic issues
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_96{{"qno":"95","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_96{{"qno":"95","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_96{{"qno":"95","score":"3"}}
+    - title: Like
+      payload: /strength_finder_96{{"qno":"95","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_96{{"qno":"95","score":"5"}}
+  utter_strength_finder_96:
+  - text: 96/114 Design and create illustrations using a software
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_97{{"qno":"96","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_97{{"qno":"96","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_97{{"qno":"96","score":"3"}}
+    - title: Like
+      payload: /strength_finder_97{{"qno":"96","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_97{{"qno":"96","score":"5"}}
+  utter_strength_finder_97:
+  - text: 97/114 Experiment to find best solutions using scientific methods
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_98{{"qno":"97","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_98{{"qno":"97","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_98{{"qno":"97","score":"3"}}
+    - title: Like
+      payload: /strength_finder_98{{"qno":"97","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_98{{"qno":"97","score":"5"}}
+  utter_strength_finder_98:
+  - text: 98/114 Communicate and work  with different kinds and types of people
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_99{{"qno":"98","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_99{{"qno":"98","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_99{{"qno":"98","score":"3"}}
+    - title: Like
+      payload: /strength_finder_99{{"qno":"98","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_99{{"qno":"98","score":"5"}}
+  utter_strength_finder_99:
+  - text: 99/114 Use knowledge of science, maths, and logic to solve problems or to improve existing solutions
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_100{{"qno":"99","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_100{{"qno":"99","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_100{{"qno":"99","score":"3"}}
+    - title: Like
+      payload: /strength_finder_100{{"qno":"99","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_100{{"qno":"99","score":"5"}}
+  utter_strength_finder_100:
+  - text: 100/114 Read and follow blueprints and floor plans
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_101{{"qno":"100","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_101{{"qno":"100","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_101{{"qno":"100","score":"3"}}
+    - title: Like
+      payload: /strength_finder_101{{"qno":"100","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_101{{"qno":"100","score":"5"}}
+  utter_strength_finder_101:
+  - text: 101/114 Sell additional products and services to existing customers or businesses
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_102{{"qno":"101","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_102{{"qno":"101","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_102{{"qno":"101","score":"3"}}
+    - title: Like
+      payload: /strength_finder_102{{"qno":"101","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_102{{"qno":"101","score":"5"}}
+  utter_strength_finder_102:
+  - text: 102/114 Designing algorithms to solve analytically complex problems to predict outcomes
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_103{{"qno":"102","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_103{{"qno":"102","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_103{{"qno":"102","score":"3"}}
+    - title: Like
+      payload: /strength_finder_103{{"qno":"102","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_103{{"qno":"102","score":"5"}}
+  utter_strength_finder_103:
+  - text: 103/114 Write content for media interviews and speeches
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_104{{"qno":"103","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_104{{"qno":"103","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_104{{"qno":"103","score":"3"}}
+    - title: Like
+      payload: /strength_finder_104{{"qno":"103","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_104{{"qno":"103","score":"5"}}
+  utter_strength_finder_104:
+  - text: 104/114 Plan and manage the physical distribution of products in organizations like Amazon, Flipkart
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_105{{"qno":"104","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_105{{"qno":"104","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_105{{"qno":"104","score":"3"}}
+    - title: Like
+      payload: /strength_finder_105{{"qno":"104","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_105{{"qno":"104","score":"5"}}
+  utter_strength_finder_105:
+  - text: 105/114 Analyse financial data, graphs, trends and interpret it to others
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_106{{"qno":"105","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_106{{"qno":"105","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_106{{"qno":"105","score":"3"}}
+    - title: Like
+      payload: /strength_finder_106{{"qno":"105","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_106{{"qno":"105","score":"5"}}
+  utter_strength_finder_106:
+  - text: 106/114 Test the quality of parts before shipment
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_107{{"qno":"106","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_107{{"qno":"106","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_107{{"qno":"106","score":"3"}}
+    - title: Like
+      payload: /strength_finder_107{{"qno":"106","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_107{{"qno":"106","score":"5"}}
+  utter_strength_finder_107:
+  - text: 107/114 Analyse trends and recommend actions for growth of a business
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_108{{"qno":"107","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_108{{"qno":"107","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_108{{"qno":"107","score":"3"}}
+    - title: Like
+      payload: /strength_finder_108{{"qno":"107","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_108{{"qno":"107","score":"5"}}
+  utter_strength_finder_108:
+  - text: 108/114 Design and create curriculum or educational materials and assessments on a subject
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_109{{"qno":"108","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_109{{"qno":"108","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_109{{"qno":"108","score":"3"}}
+    - title: Like
+      payload: /strength_finder_109{{"qno":"108","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_109{{"qno":"108","score":"5"}}
+  utter_strength_finder_109:
+  - text: 109/114 Provide excellent dining experiences in a restaurant
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_110{{"qno":"109","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_110{{"qno":"109","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_110{{"qno":"109","score":"3"}}
+    - title: Like
+      payload: /strength_finder_110{{"qno":"109","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_110{{"qno":"109","score":"5"}}
+  utter_strength_finder_110:
+  - text: 110/114 Work on conservation of earth's natural resources
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_111{{"qno":"110","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_111{{"qno":"110","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_111{{"qno":"110","score":"3"}}
+    - title: Like
+      payload: /strength_finder_111{{"qno":"110","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_111{{"qno":"110","score":"5"}}
+  utter_strength_finder_111:
+  - text: 111/114 Help people troubleshoot problems with the hardware like computers, routers, networking components etc
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_112{{"qno":"111","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_112{{"qno":"111","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_112{{"qno":"111","score":"3"}}
+    - title: Like
+      payload: /strength_finder_112{{"qno":"111","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_112{{"qno":"111","score":"5"}}
+  utter_strength_finder_112:
+  - text: 112/114 Engage in preparing meals, snacks, and beverages for immediate consumption
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_113{{"qno":"112","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_113{{"qno":"112","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_113{{"qno":"112","score":"3"}}
+    - title: Like
+      payload: /strength_finder_113{{"qno":"112","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_113{{"qno":"112","score":"5"}}
+  utter_strength_finder_113:
+  - text: 113/114 Design new car models for better comfort and performance
+    buttons:
+    - title: Strongly dislike
+      payload: /strength_finder_114{{"qno":"113","score":"1"}}
+    - title: Dislike
+      payload: /strength_finder_114{{"qno":"113","score":"2"}}
+    - title: Neutral
+      payload: /strength_finder_114{{"qno":"113","score":"3"}}
+    - title: Like
+      payload: /strength_finder_114{{"qno":"113","score":"4"}}
+    - title: Strongly like
+      payload: /strength_finder_114{{"qno":"113","score":"5"}}
+
+  utter_strength_finder_114:
+  - text: 114/114 Install, repair and maintain hardware components
+    buttons:
+    - title: Strongly dislike
+      payload: /assessment_completed{{"qno":"114","score":"1"}}
+    - title: Dislike
+      payload: /assessment_completed{{"qno":"114","score":"2"}}
+    - title: Neutral
+      payload: /assessment_completed{{"qno":"114","score":"3"}}
+    - title: Like
+      payload: /assessment_completed{{"qno":"114","score":"4"}}
+    - title: Strongly like
+      payload: /assessment_completed{{"qno":"114","score":"5"}}
+  utter_employability_test_1:
+  - text: 1/71 I am able to easily step into other people's shoes and see things from their point of view.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_2{{"qno":"1","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_2{{"qno":"1","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_2{{"qno":"1","score":"3"}}
+    - title: Often me
+      payload: /employability_test_2{{"qno":"1","score":"4"}}
+    - title: Very me
+      payload: /employability_test_2{{"qno":"1","score":"5"}}
+  utter_employability_test_2:
+  - text: 2/71 I am often able to bring people around to my way of thinking and influence their decisions.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_3{{"qno":"2","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_3{{"qno":"2","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_3{{"qno":"2","score":"3"}}
+    - title: Often me
+      payload: /employability_test_3{{"qno":"2","score":"4"}}
+    - title: Very me
+      payload: /employability_test_3{{"qno":"2","score":"5"}}
+  utter_employability_test_3:
+  - text: 3/71 I often encounter situations like what I write will be different to what I intend to convey.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_4{{"qno":"3","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_4{{"qno":"3","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_4{{"qno":"3","score":"3"}}
+    - title: Often me
+      payload: /employability_test_4{{"qno":"3","score":"2"}}
+    - title: Very me
+      payload: /employability_test_4{{"qno":"3","score":"1"}}
+  utter_employability_test_4:
+  - text: 4/71 I have a strong desire to achieve excellence in whatever I take on.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_5{{"qno":"4","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_5{{"qno":"4","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_5{{"qno":"4","score":"3"}}
+    - title: Often me
+      payload: /employability_test_5{{"qno":"4","score":"4"}}
+    - title: Very me
+      payload: /employability_test_5{{"qno":"4","score":"5"}}
+  utter_employability_test_5:
+  - text: 5/71 I like to stick to the rules even if no one is watching.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_6{{"qno":"5","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_6{{"qno":"5","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_6{{"qno":"5","score":"3"}}
+    - title: Often me
+      payload: /employability_test_6{{"qno":"5","score":"4"}}
+    - title: Very me
+      payload: /employability_test_6{{"qno":"5","score":"5"}}
+  utter_employability_test_6:
+  - text: 6/71 My friends ask me for help or advice on various matters.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_7{{"qno":"6","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_7{{"qno":"6","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_7{{"qno":"6","score":"3"}}
+    - title: Often me
+      payload: /employability_test_7{{"qno":"6","score":"4"}}
+    - title: Very me
+      payload: /employability_test_7{{"qno":"6","score":"5"}}
+  utter_employability_test_7:
+  - text: 7/71 I consider myself a creative thinker.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_8{{"qno":"7","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_8{{"qno":"7","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_8{{"qno":"7","score":"3"}}
+    - title: Often me
+      payload: /employability_test_8{{"qno":"7","score":"4"}}
+    - title: Very me
+      payload: /employability_test_8{{"qno":"7","score":"5"}}
+  utter_employability_test_8:
+  - text: 8/71 I usually describe myself as a positive person.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_9{{"qno":"8","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_9{{"qno":"8","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_9{{"qno":"8","score":"3"}}
+    - title: Often me
+      payload: /employability_test_9{{"qno":"8","score":"4"}}
+    - title: Very me
+      payload: /employability_test_9{{"qno":"8","score":"5"}}
+  utter_employability_test_9:
+  - text: 9/71 I often think that most people are with good intentions.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_10{{"qno":"9","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_10{{"qno":"9","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_10{{"qno":"9","score":"3"}}
+    - title: Often me
+      payload: /employability_test_10{{"qno":"9","score":"4"}}
+    - title: Very me
+      payload: /employability_test_10{{"qno":"9","score":"5"}}
+  utter_employability_test_10:
+  - text: 10/71 I can adapt successfully to changing situations, environments, and priorities with ease.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_11{{"qno":"10","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_11{{"qno":"10","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_11{{"qno":"10","score":"3"}}
+    - title: Often me
+      payload: /employability_test_11{{"qno":"10","score":"4"}}
+    - title: Very me
+      payload: /employability_test_11{{"qno":"10","score":"5"}}
+  utter_employability_test_11:
+  - text: 11/71 When I watch a movie or show, I try to find faults in it.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_12{{"qno":"11","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_12{{"qno":"11","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_12{{"qno":"11","score":"3"}}
+    - title: Often me
+      payload: /employability_test_12{{"qno":"11","score":"4"}}
+    - title: Very me
+      payload: /employability_test_12{{"qno":"11","score":"5"}}
+  utter_employability_test_12:
+  - text: 12/71 I feel confident in my abilities to deliver constructive feedback and to be well received.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_13{{"qno":"12","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_13{{"qno":"12","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_13{{"qno":"12","score":"3"}}
+    - title: Often me
+      payload: /employability_test_13{{"qno":"12","score":"4"}}
+    - title: Very me
+      payload: /employability_test_13{{"qno":"12","score":"5"}}
+  utter_employability_test_13:
+  - text: 13/71 I know how to relax when stressed.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_14{{"qno":"13","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_14{{"qno":"13","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_14{{"qno":"13","score":"3"}}
+    - title: Often me
+      payload: /employability_test_14{{"qno":"13","score":"4"}}
+    - title: Very me
+      payload: /employability_test_14{{"qno":"13","score":"5"}}
+  utter_employability_test_14:
+  - text: 14/71 I am often concerned what others are thinking of me.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_15{{"qno":"14","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_15{{"qno":"14","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_15{{"qno":"14","score":"3"}}
+    - title: Often me
+      payload: /employability_test_15{{"qno":"14","score":"2"}}
+    - title: Very me
+      payload: /employability_test_15{{"qno":"14","score":"1"}}
+  utter_employability_test_15:
+  - text: 15/71 If I am unable to do a task the first time, I keep trying until I succeed.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_16{{"qno":"15","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_16{{"qno":"15","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_16{{"qno":"15","score":"3"}}
+    - title: Often me
+      payload: /employability_test_16{{"qno":"15","score":"4"}}
+    - title: Very me
+      payload: /employability_test_16{{"qno":"15","score":"5"}}
+  utter_employability_test_16:
+  - text: 16/71 I do the first thing that comes to my mind.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_17{{"qno":"16","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_17{{"qno":"16","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_17{{"qno":"16","score":"3"}}
+    - title: Often me
+      payload: /employability_test_17{{"qno":"16","score":"2"}}
+    - title: Very me
+      payload: /employability_test_17{{"qno":"16","score":"1"}}
+  utter_employability_test_17:
+  - text: 17/71 It is very hard for me to control my emotions.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_18{{"qno":"17","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_18{{"qno":"17","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_18{{"qno":"17","score":"3"}}
+    - title: Often me
+      payload: /employability_test_18{{"qno":"17","score":"2"}}
+    - title: Very me
+      payload: /employability_test_18{{"qno":"17","score":"1"}}
+  utter_employability_test_18:
+  - text: 18/71 I try to be loving and caring towards myself when I'm feeling emotional pain.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_19{{"qno":"18","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_19{{"qno":"18","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_19{{"qno":"18","score":"3"}}
+    - title: Often me
+      payload: /employability_test_19{{"qno":"18","score":"4"}}
+    - title: Very me
+      payload: /employability_test_19{{"qno":"18","score":"5"}}
+  utter_employability_test_19:
+  - text: 19/71 When I need suggestions on how to deal with a personal problem, I know someone I can talk to.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_20{{"qno":"19","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_20{{"qno":"19","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_20{{"qno":"19","score":"3"}}
+    - title: Often me
+      payload: /employability_test_20{{"qno":"19","score":"4"}}
+    - title: Very me
+      payload: /employability_test_20{{"qno":"19","score":"5"}}
+  utter_employability_test_20:
+  - text: 20/71 I wish I had more self-discipline.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_21{{"qno":"20","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_21{{"qno":"20","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_21{{"qno":"20","score":"3"}}
+    - title: Often me
+      payload: /employability_test_21{{"qno":"20","score":"2"}}
+    - title: Very me
+      payload: /employability_test_21{{"qno":"20","score":"1"}}
+  utter_employability_test_21:
+  - text: 21/71 When I make decisions I employ decision-making models to weigh up risks, evaluate alternatives and apply evaluation criteria
+    buttons:
+    - title: Not very me
+      payload: /employability_test_22{{"qno":"21","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_22{{"qno":"21","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_22{{"qno":"21","score":"3"}}
+    - title: Often me
+      payload: /employability_test_22{{"qno":"21","score":"4"}}
+    - title: Very me
+      payload: /employability_test_22{{"qno":"21","score":"5"}}
+  utter_employability_test_22:
+  - text: 22/71 I often daydream during lectures or tune out when a speaker is boring.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_23{{"qno":"22","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_23{{"qno":"22","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_23{{"qno":"22","score":"3"}}
+    - title: Often me
+      payload: /employability_test_23{{"qno":"22","score":"4"}}
+    - title: Very me
+      payload: /employability_test_23{{"qno":"22","score":"5"}}
+  utter_employability_test_23:
+  - text: 23/71 I have a personal goal and vision.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_24{{"qno":"23","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_24{{"qno":"23","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_24{{"qno":"23","score":"3"}}
+    - title: Often me
+      payload: /employability_test_24{{"qno":"23","score":"4"}}
+    - title: Very me
+      payload: /employability_test_24{{"qno":"23","score":"5"}}
+  utter_employability_test_24:
+  - text: 24/71 I follow a structured approach to negotiation to achieve a desirable outcome.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_25{{"qno":"24","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_25{{"qno":"24","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_25{{"qno":"24","score":"3"}}
+    - title: Often me
+      payload: /employability_test_25{{"qno":"24","score":"4"}}
+    - title: Very me
+      payload: /employability_test_25{{"qno":"24","score":"5"}}
+  utter_employability_test_25:
+  - text: 25/71 I regularly evaluate and monitor my own performance.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_26{{"qno":"25","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_26{{"qno":"25","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_26{{"qno":"25","score":"3"}}
+    - title: Often me
+      payload: /employability_test_26{{"qno":"25","score":"4"}}
+    - title: Very me
+      payload: /employability_test_26{{"qno":"25","score":"5"}}
+  utter_employability_test_26:
+  - text: 26/71 It is more fun to tackle a complicated problem than to solve a simple one.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_27{{"qno":"26","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_27{{"qno":"26","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_27{{"qno":"26","score":"3"}}
+    - title: Often me
+      payload: /employability_test_27{{"qno":"26","score":"4"}}
+    - title: Very me
+      payload: /employability_test_27{{"qno":"26","score":"5"}}
+  utter_employability_test_27:
+  - text: 27/71 I can tell my hearts secrets to others and know that they will not betray me.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_28{{"qno":"27","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_28{{"qno":"27","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_28{{"qno":"27","score":"3"}}
+    - title: Often me
+      payload: /employability_test_28{{"qno":"27","score":"4"}}
+    - title: Very me
+      payload: /employability_test_28{{"qno":"27","score":"5"}}
+  utter_employability_test_28:
+  - text: 28/71 Am a driven and self-motivated person.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_29{{"qno":"28","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_29{{"qno":"28","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_29{{"qno":"28","score":"3"}}
+    - title: Often me
+      payload: /employability_test_29{{"qno":"28","score":"4"}}
+    - title: Very me
+      payload: /employability_test_29{{"qno":"28","score":"5"}}
+  utter_employability_test_29:
+  - text: 29/71 I am not easily moved by others suffering.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_30{{"qno":"29","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_30{{"qno":"29","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_30{{"qno":"29","score":"3"}}
+    - title: Often me
+      payload: /employability_test_30{{"qno":"29","score":"2"}}
+    - title: Very me
+      payload: /employability_test_30{{"qno":"29","score":"1"}}
+  utter_employability_test_30:
+  - text: 30/71 When under pressure, I usually underperform.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_31{{"qno":"30","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_31{{"qno":"30","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_31{{"qno":"30","score":"3"}}
+    - title: Often me
+      payload: /employability_test_31{{"qno":"30","score":"2"}}
+    - title: Very me
+      payload: /employability_test_31{{"qno":"30","score":"1"}}
+  utter_employability_test_31:
+  - text: 31/71 I am easily distracted
+    buttons:
+    - title: Not very me
+      payload: /employability_test_32{{"qno":"31","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_32{{"qno":"31","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_32{{"qno":"31","score":"3"}}
+    - title: Often me
+      payload: /employability_test_32{{"qno":"31","score":"4"}}
+    - title: Very me
+      payload: /employability_test_32{{"qno":"31","score":"5"}}
+  utter_employability_test_32:
+  - text: 32/71 When people speak to me, I can accurately read non-verbal signals like body language, facial expressions, eye contact, and other gestures.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_33{{"qno":"32","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_33{{"qno":"32","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_33{{"qno":"32","score":"3"}}
+    - title: Often me
+      payload: /employability_test_33{{"qno":"32","score":"4"}}
+    - title: Very me
+      payload: /employability_test_33{{"qno":"32","score":"5"}}
+  utter_employability_test_33:
+  - text: 33/71 I can be a bit hard, intolerant and judgemental about myself when I fail at something important to me.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_34{{"qno":"33","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_34{{"qno":"33","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_34{{"qno":"33","score":"3"}}
+    - title: Often me
+      payload: /employability_test_34{{"qno":"33","score":"4"}}
+    - title: Very me
+      payload: /employability_test_34{{"qno":"33","score":"5"}}
+  utter_employability_test_34:
+  - text: 34/71 I find myself re-reading the same para again and again?
+    buttons:
+    - title: Not very me
+      payload: /employability_test_35{{"qno":"34","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_35{{"qno":"34","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_35{{"qno":"34","score":"3"}}
+    - title: Often me
+      payload: /employability_test_35{{"qno":"34","score":"4"}}
+    - title: Very me
+      payload: /employability_test_35{{"qno":"34","score":"5"}}
+  utter_employability_test_35:
+  - text: 35/71 I enjoy networking and meeting new people.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_36{{"qno":"35","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_36{{"qno":"35","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_36{{"qno":"35","score":"3"}}
+    - title: Often me
+      payload: /employability_test_36{{"qno":"35","score":"4"}}
+    - title: Very me
+      payload: /employability_test_36{{"qno":"35","score":"5"}}
+  utter_employability_test_36:
+  - text: 36/71 Am a certain kind of person and there is not much that can be done to really change that.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_37{{"qno":"36","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_37{{"qno":"36","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_37{{"qno":"36","score":"3"}}
+    - title: Often me
+      payload: /employability_test_37{{"qno":"36","score":"2"}}
+    - title: Very me
+      payload: /employability_test_37{{"qno":"36","score":"1"}}
+  utter_employability_test_37:
+  - text: 37/71 I can jointly work with others in a team on an activity or project, defining roles, working towards a common goal, and taking an appropriate share of responsibility.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_38{{"qno":"37","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_38{{"qno":"37","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_38{{"qno":"37","score":"3"}}
+    - title: Often me
+      payload: /employability_test_38{{"qno":"37","score":"4"}}
+    - title: Very me
+      payload: /employability_test_38{{"qno":"37","score":"5"}}
+  utter_employability_test_38:
+  - text: 38/71 Am aware of my strengths and weakness and what action is needed to achieve my career goals.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_39{{"qno":"38","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_39{{"qno":"38","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_39{{"qno":"38","score":"3"}}
+    - title: Often me
+      payload: /employability_test_39{{"qno":"38","score":"4"}}
+    - title: Very me
+      payload: /employability_test_39{{"qno":"38","score":"5"}}
+  utter_employability_test_39:
+  - text: 39/71 I try to be loving towards others when I feel they are in emotional pain.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_40{{"qno":"39","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_40{{"qno":"39","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_40{{"qno":"39","score":"3"}}
+    - title: Often me
+      payload: /employability_test_40{{"qno":"39","score":"4"}}
+    - title: Very me
+      payload: /employability_test_40{{"qno":"39","score":"5"}}
+  utter_employability_test_40:
+  - text: 40/71 I use diagrams and charts to help express my ideas often in my presentations, exams etc.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_41{{"qno":"40","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_41{{"qno":"40","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_41{{"qno":"40","score":"3"}}
+    - title: Often me
+      payload: /employability_test_41{{"qno":"40","score":"4"}}
+    - title: Very me
+      payload: /employability_test_41{{"qno":"40","score":"5"}}
+  utter_employability_test_41:
+  - text: 41/71 There's nothing wrong in taking advantage of others to move forward.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_42{{"qno":"41","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_42{{"qno":"41","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_42{{"qno":"41","score":"3"}}
+    - title: Often me
+      payload: /employability_test_42{{"qno":"41","score":"2"}}
+    - title: Very me
+      payload: /employability_test_42{{"qno":"41","score":"1"}}
+  utter_employability_test_42:
+  - text: 42/71 I have difficulty in speaking languages other than mother tongue (like in English).
+    buttons:
+    - title: Not very me
+      payload: /employability_test_43{{"qno":"42","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_43{{"qno":"42","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_43{{"qno":"42","score":"3"}}
+    - title: Often me
+      payload: /employability_test_43{{"qno":"42","score":"2"}}
+    - title: Very me
+      payload: /employability_test_43{{"qno":"42","score":"1"}}
+  utter_employability_test_43:
+  - text: 43/71 If I believe something is difficult, it's hard to change my views on it.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_44{{"qno":"43","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_44{{"qno":"43","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_44{{"qno":"43","score":"3"}}
+    - title: Often me
+      payload: /employability_test_44{{"qno":"43","score":"2"}}
+    - title: Very me
+      payload: /employability_test_44{{"qno":"43","score":"1"}}
+  utter_employability_test_44:
+  - text: 44/71 I make some mistakes that could be easily avoided.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_45{{"qno":"44","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_45{{"qno":"44","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_45{{"qno":"44","score":"3"}}
+    - title: Often me
+      payload: /employability_test_45{{"qno":"44","score":"2"}}
+    - title: Very me
+      payload: /employability_test_45{{"qno":"44","score":"1"}}
+  utter_employability_test_45:
+  - text: 45/71 I present a strong, professional positive image to others which inspires confidence and commands respect.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_46{{"qno":"45","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_46{{"qno":"45","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_46{{"qno":"45","score":"3"}}
+    - title: Often me
+      payload: /employability_test_46{{"qno":"45","score":"4"}}
+    - title: Very me
+      payload: /employability_test_46{{"qno":"45","score":"5"}}
+  utter_employability_test_46:
+  - text: 46/71 I am willing to help out anyone who clearly needs it regardless of whether or not it benefits me.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_47{{"qno":"46","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_47{{"qno":"46","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_47{{"qno":"46","score":"3"}}
+    - title: Often me
+      payload: /employability_test_47{{"qno":"46","score":"4"}}
+    - title: Very me
+      payload: /employability_test_47{{"qno":"46","score":"5"}}
+  utter_employability_test_47:
+  - text: 47/71 I am able to manage my time effectively, prioritizing tasks and working to deadlines.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_48{{"qno":"47","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_48{{"qno":"47","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_48{{"qno":"47","score":"3"}}
+    - title: Often me
+      payload: /employability_test_48{{"qno":"47","score":"4"}}
+    - title: Very me
+      payload: /employability_test_48{{"qno":"47","score":"5"}}
+  utter_employability_test_48:
+  - text: 48/71 In a difficult situation, I turn at once to what can be done to put things right.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_49{{"qno":"48","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_49{{"qno":"48","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_49{{"qno":"48","score":"3"}}
+    - title: Often me
+      payload: /employability_test_49{{"qno":"48","score":"4"}}
+    - title: Very me
+      payload: /employability_test_49{{"qno":"48","score":"5"}}
+  utter_employability_test_49:
+  - text: 49/71 I don’t give up on things I want to achieve even when I face obstacles.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_50{{"qno":"49","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_50{{"qno":"49","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_50{{"qno":"49","score":"3"}}
+    - title: Often me
+      payload: /employability_test_50{{"qno":"49","score":"4"}}
+    - title: Very me
+      payload: /employability_test_50{{"qno":"49","score":"5"}}
+  utter_employability_test_50:
+  - text: 50/71 I like to take time, weighing the pros and cons before making decisions.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_51{{"qno":"50","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_51{{"qno":"50","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_51{{"qno":"50","score":"3"}}
+    - title: Often me
+      payload: /employability_test_51{{"qno":"50","score":"4"}}
+    - title: Very me
+      payload: /employability_test_51{{"qno":"50","score":"5"}}
+  utter_employability_test_51:
+  - text: 51/71 I am very good at maintaining a calm exterior even if I am upset.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_52{{"qno":"51","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_52{{"qno":"51","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_52{{"qno":"51","score":"3"}}
+    - title: Often me
+      payload: /employability_test_52{{"qno":"51","score":"4"}}
+    - title: Very me
+      payload: /employability_test_52{{"qno":"51","score":"5"}}
+  utter_employability_test_52:
+  - text: 52/71 Because my mind wanders, I find it difficult to concentrate for more than 15 minutes.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_53{{"qno":"52","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_53{{"qno":"52","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_53{{"qno":"52","score":"3"}}
+    - title: Often me
+      payload: /employability_test_53{{"qno":"52","score":"4"}}
+    - title: Very me
+      payload: /employability_test_53{{"qno":"52","score":"5"}}
+  utter_employability_test_53:
+  - text: 53/71 It is very easy for me to adapt to tone and language when talking to different audiences.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_54{{"qno":"53","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_54{{"qno":"53","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_54{{"qno":"53","score":"3"}}
+    - title: Often me
+      payload: /employability_test_54{{"qno":"53","score":"4"}}
+    - title: Very me
+      payload: /employability_test_54{{"qno":"53","score":"5"}}
+  utter_employability_test_54:
+  - text: 54/71 I have a hard time breaking bad habits.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_55{{"qno":"54","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_55{{"qno":"54","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_55{{"qno":"54","score":"3"}}
+    - title: Often me
+      payload: /employability_test_55{{"qno":"54","score":"2"}}
+    - title: Very me
+      payload: /employability_test_55{{"qno":"54","score":"1"}}
+  utter_employability_test_55:
+  - text: 55/71 Accept responsibility for my views and actions.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_56{{"qno":"55","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_56{{"qno":"55","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_56{{"qno":"55","score":"3"}}
+    - title: Often me
+      payload: /employability_test_56{{"qno":"55","score":"4"}}
+    - title: Very me
+      payload: /employability_test_56{{"qno":"55","score":"5"}}
+  utter_employability_test_56:
+  - text: 56/71 I think we can do more working together than I can do alone.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_57{{"qno":"56","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_57{{"qno":"56","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_57{{"qno":"56","score":"3"}}
+    - title: Often me
+      payload: /employability_test_57{{"qno":"56","score":"4"}}
+    - title: Very me
+      payload: /employability_test_57{{"qno":"56","score":"5"}}
+  utter_employability_test_57:
+  - text: 57/71 I find myself not able to remember something although it's on the tip of my tongue.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_58{{"qno":"57","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_58{{"qno":"57","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_58{{"qno":"57","score":"3"}}
+    - title: Often me
+      payload: /employability_test_58{{"qno":"57","score":"4"}}
+    - title: Very me
+      payload: /employability_test_58{{"qno":"57","score":"5"}}
+  utter_employability_test_58:
+  - text: 58/71 I always have a plan B in place in case plan A doesn't work out.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_59{{"qno":"58","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_59{{"qno":"58","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_59{{"qno":"58","score":"3"}}
+    - title: Often me
+      payload: /employability_test_59{{"qno":"58","score":"4"}}
+    - title: Very me
+      payload: /employability_test_59{{"qno":"58","score":"5"}}
+  utter_employability_test_59:
+  - text: 59/71 I find it difficult to express my ideas clearly and confidently when I talk in front of people.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_60{{"qno":"59","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_60{{"qno":"59","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_60{{"qno":"59","score":"3"}}
+    - title: Often me
+      payload: /employability_test_60{{"qno":"59","score":"2"}}
+    - title: Very me
+      payload: /employability_test_60{{"qno":"59","score":"1"}}
+  utter_employability_test_60:
+  - text: 60/71 I am often chosen to be the leader of a group.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_61{{"qno":"60","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_61{{"qno":"60","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_61{{"qno":"60","score":"3"}}
+    - title: Often me
+      payload: /employability_test_61{{"qno":"60","score":"4"}}
+    - title: Very me
+      payload: /employability_test_61{{"qno":"60","score":"5"}}
+  utter_employability_test_61:
+  - text: 61/71 I keep a count on all the good things happening to me.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_62{{"qno":"61","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_62{{"qno":"61","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_62{{"qno":"61","score":"3"}}
+    - title: Often me
+      payload: /employability_test_62{{"qno":"61","score":"4"}}
+    - title: Very me
+      payload: /employability_test_62{{"qno":"61","score":"5"}}
+  utter_employability_test_62:
+  - text: 62/71 I often forget where I put something like a newspaper or a book.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_63{{"qno":"62","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_63{{"qno":"62","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_63{{"qno":"62","score":"3"}}
+    - title: Often me
+      payload: /employability_test_63{{"qno":"62","score":"4"}}
+    - title: Very me
+      payload: /employability_test_63{{"qno":"62","score":"5"}}
+  utter_employability_test_63:
+  - text: 63/71 I regularly use Initiative to act upon and create new opportunities.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_64{{"qno":"63","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_64{{"qno":"63","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_64{{"qno":"63","score":"3"}}
+    - title: Often me
+      payload: /employability_test_64{{"qno":"63","score":"4"}}
+    - title: Very me
+      payload: /employability_test_64{{"qno":"63","score":"5"}}
+  utter_employability_test_64:
+  - text: 64/71 The night before a major project is due, I am usually working on it.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_65{{"qno":"64","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_65{{"qno":"64","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_65{{"qno":"64","score":"3"}}
+    - title: Often me
+      payload: /employability_test_65{{"qno":"64","score":"2"}}
+    - title: Very me
+      payload: /employability_test_65{{"qno":"64","score":"1"}}
+  utter_employability_test_65:
+  - text: 65/71 I often feel sleepy in my class while attending lectures.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_66{{"qno":"65","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_66{{"qno":"65","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_66{{"qno":"65","score":"3"}}
+    - title: Often me
+      payload: /employability_test_66{{"qno":"65","score":"4"}}
+    - title: Very me
+      payload: /employability_test_66{{"qno":"65","score":"5"}}
+  utter_employability_test_66:
+  - text: 66/71 I don't have genuine friends who feel happy about my success.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_67{{"qno":"66","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_67{{"qno":"66","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_67{{"qno":"66","score":"3"}}
+    - title: Often me
+      payload: /employability_test_67{{"qno":"66","score":"2"}}
+    - title: Very me
+      payload: /employability_test_67{{"qno":"66","score":"1"}}
+  utter_employability_test_67:
+  - text: 67/71 I have trouble getting back to work after I have been interrupted.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_68{{"qno":"67","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_68{{"qno":"67","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_68{{"qno":"67","score":"3"}}
+    - title: Often me
+      payload: /employability_test_68{{"qno":"67","score":"4"}}
+    - title: Very me
+      payload: /employability_test_68{{"qno":"67","score":"5"}}
+  utter_employability_test_68:
+  - text: 68/71 When a problem occurs, I find a person to blame.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_69{{"qno":"68","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_69{{"qno":"68","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_69{{"qno":"68","score":"3"}}
+    - title: Often me
+      payload: /employability_test_69{{"qno":"68","score":"2"}}
+    - title: Very me
+      payload: /employability_test_69{{"qno":"68","score":"1"}}
+  utter_employability_test_69:
+  - text: 69/71 I believe truly smart people do not need to work hard.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_70{{"qno":"69","score":"5"}}
+    - title: Rarely me
+      payload: /employability_test_70{{"qno":"69","score":"4"}}
+    - title: Sometimes me
+      payload: /employability_test_70{{"qno":"69","score":"3"}}
+    - title: Often me
+      payload: /employability_test_70{{"qno":"69","score":"2"}}
+    - title: Very me
+      payload: /employability_test_70{{"qno":"69","score":"1"}}
+  utter_employability_test_70:
+  - text: 70/71 I have trouble sleeping through the night.
+    buttons:
+    - title: Not very me
+      payload: /employability_test_71{{"qno":"70","score":"1"}}
+    - title: Rarely me
+      payload: /employability_test_71{{"qno":"70","score":"2"}}
+    - title: Sometimes me
+      payload: /employability_test_71{{"qno":"70","score":"3"}}
+    - title: Often me
+      payload: /employability_test_71{{"qno":"70","score":"4"}}
+    - title: Very me
+      payload: /employability_test_71{{"qno":"70","score":"5"}}
+
+  utter_employability_test_71:
+  - text: 71/71 I usually nod but don't pay attention when others are speaking something that does not interest me.
+    buttons:
+    - title: Not very me
+      payload: /assessment_completed{{"qno":"71","score":"5"}}
+    - title: Rarely me
+      payload: /assessment_completed{{"qno":"71","score":"4"}}
+    - title: Sometimes me
+      payload: /assessment_completed{{"qno":"71","score":"3"}}
+    - title: Often me
+      payload: /assessment_completed{{"qno":"71","score":"2"}}
+    - title: Very me
+      payload: /assessment_completed{{"qno":"71","score":"1"}}
+  utter_assessment_completed:
+  - text: Thankyou for taking the assessment.
