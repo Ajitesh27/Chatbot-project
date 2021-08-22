@@ -20,7 +20,7 @@ pip install -r requirements.txt
  
  ## Execution
  - Open two terminals since we need to run both the rasa server and action server.
- - cd into the folder until you see thr models and actions folder ie cd Chatbot-project/Chatbot-project.
+ - cd into the folder until you see the models and actions folder ie cd Chatbot-project/Chatbot-project.
  - Run the following command in one terminal 
  rasa run -m models --enable-api --cors "*" --debug
  - Run the following command in the other terminal 
