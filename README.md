@@ -13,12 +13,12 @@ OR
 
 pip install -r requirements.txt
  
- ##Configuration
+ ## Configuration
  - If you are installing on your local machine, current configuration is sufficient.
  - Remember to add the email id and password in Finalemail.py file. If you are using Gmail, turn on Less secure app access in your acccount settings.
  - If you are installing on a server configuration of a few files is required to mention your endpoints. ( Refer www.rasa.com/docs ). Further Chatbot-project/ChatbotWidget-main is the frontend. Place this folder in the appropriate location depending on how you host it. Remember frontend communicates with the backend using REST channel.
  
- ##Execution
+ ## Execution
  - Open two terminals since we need to run both the rasa server and action server.
  - cd into the folder until you see thr models and actions folder ie cd Chatbot-project/Chatbot-project.
  - Run the following command in one terminal 
